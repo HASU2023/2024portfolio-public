@@ -1,0 +1,32 @@
+/* 전체 폰트 연결 및 기본 값 (행간 등) 세팅 */
+
+html {
+    font-family: 'Pretendard Variable', sans-serif;
+    /* 폰트를 읽어오지 못할 경우에 sans-serif를 읽어오겠다는 의미. */
+    font-weight: normal;
+    font-style: normal;
+    color: #000;
+    font-size: 16px;
+    line-height: 1;
+    word-break: break-all;
+}
+
+.archivo {
+    /* 구글폰트 넣는 용. 해당 클래스를 가진 애들은 다 이렇게 됨. */
+    font-family: 'Archivo', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mini-text {
+    font-weight: 300;
+    font-size: 16px;
+}
+
+@media (max-width:1000px) {
+    .mini-text {
+        font-weight: 300;
+        font-size: 12px;
+    }
+}
