@@ -78,6 +78,7 @@ body * {
     display: flex;
     flex-flow: column nowrap;
     gap: 24px;
+    width: 100%;
 
     & div {
         align-self: flex-start;
@@ -121,6 +122,8 @@ body * {
     width: 100vw;
     height: 1080px;
     position: relative;
+
+    overflow-x: hidden;
 }
 
 .first-moveani {
