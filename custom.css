@@ -156,8 +156,30 @@ body * {
     }
 }
 
+@keyframes first-title-ani-1 {
+    from {
+        color: #000;
+    }
+
+    to {
+        color: transparent;
+    }
+}
+
+@keyframes first-title-ani-2 {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        padding: 0 3vw;
+        opacity: 1;
+        transform: translate(-1%, -6%);
+    }
+}
+
+
 .title-text {
-    height: 100%;
     text-align: center;
     display: flex;
     flex-flow: column nowrap;
@@ -170,35 +192,28 @@ body * {
         padding-bottom: 50px;
         position: relative;
 
-        color: transparent;
         -webkit-text-stroke: 2px #000;
+
+        animation-name: first-title-ani-1;
+        animation-duration: .5s;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-delay: .5s;
+        animation-fill-mode: both;
+
 
         & span {
             display: inline-block;
-            opacity: 0;
             font-weight: 100;
             color: #000;
             -webkit-text-stroke: none;
 
-            padding: 0;
-        }
-    }
-
-    .first-title:hover {
-        color: var(--back-color);
-
-        transition-timing-function: ease;
-        transition-delay: .3s;
-        transition-duration: .3s;
-
-        & span {
-            opacity: 1;
-            padding: 0 3vw;
-            transform: translate(-1%, -6%);
-
-            transition-timing-function: ease;
-            transition-delay: .3s;
-            transition-duration: .3s;
+            animation-name: first-title-ani-2;
+            animation-duration: .3s;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-out;
+            animation-delay: 1s;
+            animation-fill-mode: both;
         }
     }
 }
